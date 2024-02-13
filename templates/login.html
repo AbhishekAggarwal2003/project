@@ -1,0 +1,32 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Care - Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+    <h1>WeCare</h1>
+    <h3>Connecting people with similar disease</h3>
+    <br>
+    <h2>About Us</h2>
+    <p1>Welcome to WeCare, where you can find support and information from people who have faced similar health challenges.We are a community of people where we try and connect people with similar diseases. Our aim is to provide emotional support to the patients battling a rare or a terminal illness. You can help us grow our community by providing your valuable expereince if you have battled or are battling a rare or a termminal disease.</p1>
+    <h1>Login</h1>
+    <form action="/login" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <input type="submit" value="Login">
+    </form>
+
+    <!-- Add a link to the register page -->
+    <p>Don't have an account?
+    <a href="{{ url_for('register') }}">Register</a></p>
+
+</body>
+</html>
